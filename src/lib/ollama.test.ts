@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { chooseReply, failureMessage, readChatStream } from './ollama';
 
 describe('Ollama errors', () => {
-  const base = { url: 'http://localhost:11434', origin: 'https://413x45h4w.github.io', model: 'qwen3-abliterated' };
+  const base = { url: 'http://localhost:11434', origin: 'https://4lex-4shaw.github.io', model: 'qwen3-abliterated' };
 
   it('does not blame CORS for a timeout or a reachable server', () => {
     expect(failureMessage({ ...base, kind: 'timeout' })).not.toMatch(/OLLAMA_ORIGINS/);
