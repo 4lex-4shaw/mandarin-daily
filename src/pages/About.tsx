@@ -30,7 +30,7 @@ export function About() {
       <p>Audio uses the browser’s speechSynthesis and a zh-CN voice if one is installed. Speech recognition uses the Web Speech API, which is mainly Chromium (Chrome, Edge, some Android browsers) and often needs a network round-trip to the browser vendor. Firefox does not implement it. When recognition is missing or fails, you can record yourself and self-grade.</p>
       <h2>Conversation partner</h2>
       <p>The Talk tab is optional. It calls Ollama on your own computer at the URL in Settings (default http://localhost:11434, model qwen3-abliterated). Ollama must allow this site’s origin:</p>
-      <pre>{`OLLAMA_ORIGINS=${typeof window === 'undefined' ? 'https://413x45h4w.github.io' : window.location.origin} ollama serve`}</pre>
+      <pre>{`OLLAMA_ORIGINS=${typeof window === 'undefined' ? 'https://4lex-4shaw.github.io' : window.location.origin} ollama serve`}</pre>
       <p>An https page calling http://localhost works in Chrome’s loopback exception and fails in some other browsers. If Ollama is off, the rest of the app is unaffected.</p>
       <p><Link to="/">Back to today</Link></p>
     </div>

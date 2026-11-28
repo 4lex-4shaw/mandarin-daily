@@ -22,7 +22,7 @@ export function Chat() {
   const [error, setError] = useState('');
   const [models, setModels] = useState<string[]>([]);
   const inflight = useRef<AbortController | null>(null);
-  const origin = typeof window === 'undefined' ? 'https://413x45h4w.github.io' : window.location.origin;
+  const origin = typeof window === 'undefined' ? 'https://4lex-4shaw.github.io' : window.location.origin;
 
   useEffect(() => {
     const ctrl = new AbortController();

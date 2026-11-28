@@ -2,7 +2,7 @@
 
 A free, private daily practice app for Mandarin. It runs as a static site: no account, no backend, and no paid API. Progress stays in IndexedDB on your device, and you can export or import it as JSON.
 
-Live app: [https://413x45h4w.github.io/mandarin-daily/](https://413x45h4w.github.io/mandarin-daily/)
+Live app: [https://4lex-4shaw.github.io/mandarin-daily/](https://4lex-4shaw.github.io/mandarin-daily/)
 
 ## Features
 
@@ -47,7 +47,7 @@ npm run preview
 The Talk tab is optional. Opening it preloads the model and keeps it loaded for 30 minutes (`keep_alive`). A cold load of a large model can take a minute or two; the tab waits up to 5 minutes and shows a loading state with Cancel, instead of treating that wait as a connection failure. In the terminal that starts Ollama, allow this site’s origin:
 
 ```bash
-OLLAMA_ORIGINS=https://413x45h4w.github.io ollama serve
+OLLAMA_ORIGINS=https://4lex-4shaw.github.io ollama serve
 ```
 
 For local dev, include `http://localhost:5173` as well (comma-separated). Pull whatever model name you set in Settings. The default name is `qwen3-abliterated`. Chrome allows an https page to call `http://localhost`. Some other browsers block that mixed request. If Ollama is unreachable, the tab explains why and the rest of the app still works.
