@@ -24,6 +24,8 @@
   --heat4: #9f2d22;
   --font: "Avenir Next", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", "WenQuanYi Micro Hei", "Droid Sans Fallback", sans-serif;
   --han: "Songti SC", "Noto Serif SC", "Source Han Serif SC", "STSong", "SimSun", "PingFang SC", "WenQuanYi Micro Hei", serif;
+  /* Latin UI faces. CJK reading fonts claim tone letters such as ǎ ǐ ǔ but draw them blank. */
+  --latin: system-ui, Inter, "Segoe UI", Roboto, Arial, sans-serif;
 }
 
 :root[data-theme="dark"] {
@@ -276,6 +278,12 @@ p { margin: 0; }
 .hanzi.xl, .hanzi-block.xl .hanzi { font-size: clamp(4.2rem, 16vw, 7rem); line-height: 1.05; }
 .hanzi.lg, .hanzi-block.lg .hanzi { font-size: clamp(2.6rem, 8vw, 4rem); line-height: 1.1; }
 .hanzi-block { display: flex; flex-direction: column; gap: 6px; }
+.pinyin,
+.pinyin-line,
+.gloss-py,
+rt {
+  font-family: var(--latin);
+}
 .pinyin-line { display: flex; flex-wrap: wrap; gap: 0.35em; font-size: 1.15rem; }
 .tone-1 { color: var(--tone1); }
 .tone-2 { color: var(--tone2); }
@@ -353,7 +361,7 @@ legend { font-weight: 650; margin-bottom: 8px; }
   padding: 10px 12px;
 }
 .word-list strong { grid-area: zh; font-family: var(--han); font-size: 1.6rem; align-self: center; }
-.word-list span { grid-area: py; }
+.word-list span { grid-area: py; font-family: var(--latin); }
 .word-list em { grid-area: en; color: var(--ink-soft); font-style: normal; }
 
 .stat-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
@@ -388,7 +396,7 @@ legend { font-weight: 650; margin-bottom: 8px; }
   border-radius: 8px;
 }
 .gloss:hover, .gloss:focus-visible { background: color-mix(in srgb, var(--accent) 10%, transparent); }
-.gloss-py { font-size: 0.62rem; line-height: 1; }
+.gloss-py { font-family: var(--latin); font-size: 0.62rem; line-height: 1; }
 .gloss-zh { font-family: var(--han); font-size: 1.35rem; }
 .sheet-back {
   position: fixed;

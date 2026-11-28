@@ -657,7 +657,7 @@ export function WriteDrill({ word, char, onDone }: { word: Word; char: string; o
   return (
     <div className="drill">
       <p className="eyebrow">Write the character in stroke order</p>
-      <p className="muted">{word.m.split(';')[0]} · {word.p}</p>
+      <p className="muted">{word.m.split(';')[0]} · <span className="pinyin" lang="zh-Latn">{word.p}</span></p>
       <div className="writer-box" ref={box} />
       {settings.traditional && <p className="muted tiny">Stroke order follows the simplified form {char}.</p>}
       {failed && <p className="banner">Stroke data did not load. Trace it on paper, then grade yourself.</p>}

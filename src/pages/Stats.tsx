@@ -59,7 +59,7 @@ export function Stats() {
               <li key={card.wordId}>
                 <Link to={`/words/${encodeURIComponent(word.id)}`}>
                   <strong lang={settings.traditional ? 'zh-TW' : 'zh-CN'}>{displayHanzi(word, settings.traditional)}</strong>
-                  <span>{word.p}</span>
+                  <span className="pinyin" lang="zh-Latn">{word.p}</span>
                   <em>{card.lapses} lapse{card.lapses === 1 ? '' : 's'}</em>
                 </Link>
               </li>

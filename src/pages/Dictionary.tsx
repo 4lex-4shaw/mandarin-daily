@@ -34,7 +34,7 @@ export function Dictionary() {
           <li key={word.id}>
             <Link to={`/words/${encodeURIComponent(word.id)}`}>
               <strong lang="zh-CN">{displayHanzi(word, settings.traditional)}</strong>
-              <span>{word.p}</span>
+              <span className="pinyin" lang="zh-Latn">{word.p}</span>
               <em>{word.m.split(';')[0]}</em>
             </Link>
           </li>

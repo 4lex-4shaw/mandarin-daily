@@ -25,7 +25,7 @@ export function PinyinLine({ pinyin }: { pinyin: string }) {
   const { settings } = useApp();
   const parts = splitPinyin(pinyin);
   return (
-    <span className="pinyin-line" lang="zh-Latn">
+    <span className="pinyin pinyin-line" lang="zh-Latn">
       {parts.map((part, i) => (
         <span key={`${part.text}-${i}`} className={toneClass(part.tone, settings.toneColors)}>
           {part.text}
@@ -127,7 +127,7 @@ function RubyRow({
         const chars = token.word ? displayHanzi(token.word, traditional) : token.text;
         const body = (
           <>
-            {pinyinOn && token.pinyin ? <span className="gloss-py">{colored(token.pinyin, toneColors)}</span> : null}
+            {pinyinOn && token.pinyin ? <span className="pinyin gloss-py" lang="zh-Latn">{colored(token.pinyin, toneColors)}</span> : null}
             <span className="gloss-zh">{chars}</span>
           </>
         );
